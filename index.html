@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css">
+    <link rel="stylesheet" href="/styles/style.css">
     <title>Agencia</title>
 </head>
 <body>
-    <header>
-        <div>
+    <header class="main-header">
+        <div class="content-wrapper">
             <a href="/">
                 <img src="./img/logotipo.png" alt="logotipo de la empresa">
             </a>
-            <nav>
+            <span id="open-menu-button" class="jam jam-menu"></span>
+            <nav id="main-menu" class="main-menu">
+                <span id="close-menu-button" class="jam jam-close"></span>
                 <ul>
                     <li>
                         <a href="/">Inicio</a>
@@ -32,116 +37,128 @@
     </header>
 
     <main>
-        <section>
-            <div>
-                <div>
-                    <h1>Bienvenidos</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, atque.</p>
+        <section class="main-banner section-container">
+            <div class="content content-wrapper">
+                <div class="container">
+                    <h1 class="title">Bienvenidos</h1>
+                    <p class="subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, atque.</p>
                     <div>
-                        <a href="/contacto.html">Contacta con nosotros</a>
+                        <a class="button white" href="/contacto.html">Contacta con nosotros</a>
                     </div>
                 </div>
-                <div>
-                    <img src="./img/computer.svg" alt="">
+                <div class="container">
+                    <img class="image" src="./img/computer.svg" alt="">
                 </div>
             </div>
         </section>
 
-        <section>
-            <div>
+        <section class="services-section section-container">
                 <h2>Nuestros servicios</h2>
-                <div>
-                    <article>
-                        <span></span>
+                <div class="content-wrapper">
+                    <article class="service-item">
+                        <span class="jam jam-computer"></span>
                         <h3>Servicio 1</h3>
                         <p>Diseñamos tu presencia en internet con aparencia profesional</p>
                     </article>
-                    <article>
-                        <span></span>
+                    <article class="service-item">
+                        <span class="jam jam-microchip"></span>
                         <h3>Servicio 2</h3>
                         <p>Diseñamos tu presencia en internet con aparencia profesional</p>
                     </article>
-                    <article>
-                        <span></span>
+                    <article class="service-item">
+                        <span class="jam jam-keyboard"></span>
                         <h3>Servicio 3</h3>
                         <p>Diseñamos tu presencia en internet con aparencia profesional</p>
                     </article>
                 </div>
-            </div>
         </section>
 
-        <section>
-            <div>
-                <h2>Sobre nosotros</h2>
+        <section class="about-section section-container">
+            <div class="content-wrapper">
+                <h2 class="title">Sobre nosotros</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, omnis? Labore a autem dolorum! Sint saepe ipsa voluptas nulla, quis fugiat ex reiciendis necessitatibus dignissimos excepturi itaque. Consequuntur, sunt tempora?</p>
-                <a href="/proyectos.html">Ver experiencia</a>
+                <a href="/proyectos.html" class="button white ghost">Ver experiencia</a>
             </div>
-            <img src="" alt="">
+            <img class="background" src="./img/bg-section.jpg" alt="">
         </section>
 
-        <section>
+        <section class="last-projects section-container">
             <h2>Últimos proyectos</h2>
-            <div>
-                <a href="#">
+            <div class="content-wrapper">
+                <a href="#" class="project-item">
                     <article>
                         <div>
                             <h4>Título Proyectos</h4>
                             <p>Descripción del proyecto</p>
                         </div>
+                        <div class="image-container">
+                            <img src="./img/project-1.jpg" alt="Proyecto 1">
+                        </div>
                     </article>
                 </a>
-                <a href="#">
+                <a href="#" class="project-item">
                     <article>
                         <div>
                             <h4>Título Proyectos</h4>
                             <p>Descripción del proyecto</p>
                         </div>
+                        <div class="image-container">
+                            <img src="./img/project-2.jpg" alt="Proyecto 2">
+                        </div>
                     </article>
                 </a>
-                <a href="#">
+                <a href="#" class="project-item">
                     <article>
                         <div>
                             <h4>Título Proyectos</h4>
                             <p>Descripción del proyecto</p>
                         </div>
+                        <div class="image-container">
+                            <img src="./img/project-3.jpg" alt="Proyecto 3">
+                        </div>
                     </article>
                 </a>
-                <a href="#">
+                <a href="#" class="project-item">
                     <article>
                         <div>
                             <h4>Título Proyectos</h4>
                             <p>Descripción del proyecto</p>
+                        </div>
+                        <div class="image-container">
+                            <img src="./img/project-4.jpg" alt="Proyecto 4">
                         </div>
                     </article>
                 </a>
             </div>
         </section>
 
-        <section>
-            <div>
-                <h2>¿Quieres trabajar con nosotros?</h2>
-                <p>Es momento de convertir tu idea en algo real. Puedes contactarnos en nuestras redes sociales<br/> o enviando un correo a:</p>
+        <section class="work-with-us">
+            <div class="content-wrapper">
+                <h2 class="title">¿Quieres trabajar con nosotros?</h2>
+                <p class="subtitle">Es momento de convertir tu idea en algo real. Puedes contactarnos en nuestras redes sociales<br/> o enviando un correo a:</p>
                 <a href="mailto:correo@gmail.com">correo@gmail.com</a>
-                <div>
+                <div class="social-networks">
                     <a href="#" target="_blank">
-                        <span></span>
+                        <span class="jam jam-facebook"></span>
                     </a>
                     <a href="" target="_blank">
-                        <span></span>
+                        <span class="jam jam-instagram"></span>
                     </a>
                     <a href="" target="_blank">
-                        <span></span>
+                        <span class="jam jam-twitter"></span>
                     </a>
                     <a href="" target="_blank">
-                        <span></span>
+                        <span class="jam jam-whatsapp"></span>
                     </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="main-footer">
         <p>Todos los derechos reservados 2020</p>
     </footer>
+
+    <script src="./js/menu.js"></script>
 </body>
 </html>
