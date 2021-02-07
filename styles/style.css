@@ -5,8 +5,8 @@
 
 /*  Importación de fuentes desde un archivo del mismo proyecto  */
 @font-face {
-  font-family : 'Proxima Nova Rg';
-  src         : url('/files/proxima-nova-bold.otf');
+    font-family: 'Proxima Nova Rg';
+    src: url('/files/proxima-nova-bold.otf');
 }
 
 :root {
@@ -22,59 +22,59 @@
     --body-font: 'Open Sans', sans-serif;
     --title-font: 'Proxima Nova Rg', sans-serif;
 
-     /*  Anchura máxima del contenido en desktop */
-    --max-width : 1200px;
+    /*  Anchura máxima del contenido en desktop */
+    --max-width: 1200px;
 
     /*  Tamaños  */
-    --header-height     : 3rem;
-    --section-spacing   : 4rem;
-    --block-spacing     : 2rem;
-    --body-line-height  : 1.6;
-    --title-line-height : 1.3;
+    --header-height: 3rem;
+    --section-spacing: 4rem;
+    --block-spacing: 2rem;
+    --body-line-height: 1.6;
+    --title-line-height: 1.3;
 
     /* Tamaños de fuentes */
-    --h1-font-size      : 2rem;
-    --h2-font-size      : 1.5rem;
-    --h3-font-size      : 1.25rem;
-    --h4-font-size      : 1rem;
-    --big-font-size     : 1rem;
-    --normal-font-size  : 0.875rem;
-    --small-font-size   : 0.75rem;
-    --smaller-font-size : 0.6875rem;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --h4-font-size: 1rem;
+    --big-font-size: 1rem;
+    --normal-font-size: 0.875rem;
+    --small-font-size: 0.75rem;
+    --smaller-font-size: 0.6875rem;
 
-      /* Capas */
-    --z-back       : -10;
-    --z-normal     : 1;
-    --z-front      : 10;
-    --z-tooltip    : 20;
-    --z-overlay    : 30;
-    --z-modal      : 40;
-    --z-fixed      : 50;
-    --z-off-canvas : 100;
+    /* Capas */
+    --z-back: -10;
+    --z-normal: 1;
+    --z-front: 10;
+    --z-tooltip: 20;
+    --z-overlay: 30;
+    --z-modal: 40;
+    --z-fixed: 50;
+    --z-off-canvas: 100;
 
-  /* Otros */
-    --border-radius : 0.5rem;
-    --box-shadow    : 0 2px 2px rgba(36, 47, 66, 0.1);
+    /* Otros */
+    --border-radius: 0.5rem;
+    --box-shadow: 0 2px 2px rgba(36, 47, 66, 0.1);
 }
 
 @media screen and (min-width: 1024px) {
 
     /*  Variables de tamaño en desktop  */
     :root {
-      --header-height         : 4rem;
-      --section-spacing       : 8rem;
-      --block-spacing         : 4rem;
-      --h1-font-size          : 3rem;
-      --h2-font-size          : 2rem;
-      --h3-font-size          : 1.5rem;
-      --h4-font-size          : 1.25rem;
-      --big-font-size         : 1.25rem;
-      --normal-font-size      : 1rem;
-      --small-font-size       : 0.875rem;
-      --smaller-font-size     : 0.75rem;
+        --header-height: 4rem;
+        --section-spacing: 8rem;
+        --block-spacing: 4rem;
+        --h1-font-size: 3rem;
+        --h2-font-size: 2rem;
+        --h3-font-size: 1.5rem;
+        --h4-font-size: 1.25rem;
+        --big-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+        --smaller-font-size: 0.75rem;
     }
-  
-  }
+
+}
 
 body {
     display: flex;
@@ -109,8 +109,12 @@ p {
     margin-top: 0;
 }
 
-h1, h2, h3,
-h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-top: 0;
     color: var(--title-color);
     font-family: var(--title-font);
@@ -222,4 +226,123 @@ h4 {
 .button.ghost.white:hover {
     color: var(--primary-color);
     background: var(--color);
+}
+
+.main-header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    height: var(--header-height);
+    width: 100%;
+    background: var(--white-color);
+    box-shadow: 0 3px 5px rgba(112, 126, 132, 0.1);
+    z-index: var(--z-fixed);
+}
+
+.main-header .content-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.main-header .jam {
+    margin-left: auto;
+    color: var(--title-color);
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .main-header .jam {
+        display: none;
+    }
+}
+
+.main-header img {
+    height: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .main-header img {
+        height: 2rem;
+    }
+}
+
+.main-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .main-menu {
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .main-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--white-color);
+        z-index: var(--z-off-canvas);
+        transform: scale(0);
+        transition: transform 0.25s;
+    }
+}
+
+.main-menu.active {
+    transform: initial;
+}
+
+.main-menu ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .main-menu ul {
+        display: flex;
+    }
+}
+
+.main-menu .jam-close {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+}
+
+.main-menu a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--title-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.main-menu a:hover {
+    color: var(--primary-color);
+}
+
+@media screen and (max-width: 1024px) {
+
+    .main-menu a {
+        text-align: center;
+        font-size: var(--big-font-size);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .main-menu ul li:last-of-type a {
+        padding-right: 0;
+    }
 }
