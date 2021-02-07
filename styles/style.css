@@ -75,3 +75,151 @@
     }
   
   }
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* 
+    Se coloca 100vh para que el contenido del body abarque siempre todo el espacio, porque usualmente el body
+    abarca el contenido que tiene disponible y habrán ocasiones donde tu página tenga poco contenido y el body
+    medirá muy poco y el footer estaría arriba o en el medio, se le coloca esa altura mínima para que el footer 
+    siempre esté abajo.
+
+    Se le resta el header-height porque es un tamaño donde el header siempre va a estar presente en nuestro sitio,
+    es mejor restarlo para no tener que sumarlo al VH (siempre va a estar del tamaño del viemport)
+    */
+    min-height: calc(100vh - var(--header-height));
+    color: var(--text-color);
+    /*
+    Cuando se le coloca el posicionamiento fijo al header pierde su espacio reservado y todos los elementos se recorren, 
+    para evitar que el contenido choque con el header se le coloca el padding top de la misma altura que el header. 
+    */
+    padding-top: var(--header-height);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    line-height: var(--body-line-height);
+    background-color: var(--body-bg-color);
+}
+
+a {
+    color: var(--primary-color)
+}
+
+p {
+    margin-top: 0;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    margin-top: 0;
+    color: var(--title-color);
+    font-family: var(--title-font);
+    line-height: var(--title-line-height);
+    font-weight: 800;
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+}
+
+h4 {
+    font-size: var(--h4-font-size);
+}
+
+.main h1 {
+    margin-bottom: var(--block-spacing);
+    padding-top: var(--block-spacing);
+}
+
+.content-wrapper {
+    width: calc(100% - 2rem);
+    max-width: var(--max-width);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .content-wrapper {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.section-container {
+    margin-bottom: var(--section-spacing);
+}
+
+.section-container h1,
+.section-container h2 {
+    text-align: center;
+}
+
+.image-container {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%;
+    /*
+    Aspect ratio 16:9
+    Si colocamos el padding-bottom 56.25% obtenemos este aspect ratio, aunque no tenga una altura definida
+    con el padding va a crear ese tamaño y va a ocultar el contenido que se exceda.
+    */
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*
+    Se le coloca position absolute para que se expanda a todo su contenedor.
+    */
+}
+
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--white-color);
+    background: var(--color);
+    border: 1px solid var(--color);
+}
+
+.button:hover {
+    background: var(--color-alt);
+}
+
+.button.white {
+    --color: var(--white-color);
+    --color-alt: var(var(--body-bg-color));
+    color: var(--primary-color);
+}
+
+.button.ghost {
+    color: var(--color);
+    background: transparent;
+}
+
+.button.ghost:hover {
+    color: var(--white-color);
+    background: var(--color);
+}
+
+.button.ghost.white:hover {
+    color: var(--primary-color);
+    background: var(--color);
+}
