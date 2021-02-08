@@ -568,3 +568,71 @@ h4 {
     opacity: 0.8;
     font-size: var(--small-font-size);
 }
+
+.work-with-us {
+    text-align: center;
+    margin-bottom: var(--block-spacing);
+}
+
+.work-with-us .title {
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .work-with-us .title {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.work-with-us .subtitle,
+.work-with-us .button {
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .work-with-us .subtitle,
+    .work-with-us .button {
+        margin-bottom: 2rem;
+    }
+}
+
+
+.social-networks a {
+    padding: 0.25rem;
+    color: var(--text-color);
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .social-networks a {
+        font-size: 1.5rem;
+    }
+}
+
+.social-networks a:hover {
+    color: var(--primary-color);
+}
+
+.social-networks a:not(:last-of-type) {
+    margin-right: 1.5rem;
+}
+
+
+.main-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    width: 100%;
+    height: var(--header-height);
+    background: var(--white-color);
+    font-size: var(--small-font-size);
+}
+
+.main-footer p {
+    margin-bottom: 0;
+}
